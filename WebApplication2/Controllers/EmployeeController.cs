@@ -4,16 +4,16 @@ using WebApplication2.Models;
 
 namespace WebApplication2.Controllers
 {
-    public class EmployeeContoller : Controller
+    public class EmployeeController : Controller
     {
         private readonly AppDbContext _context;
-        public EmployeeContoller(AppDbContext context)
+        public EmployeeController(AppDbContext context)
         {
             _context = context;
         }
         public IActionResult Index()
         {
-            List<Employee> employees = _context.Employees.ToList();
+            List<Models.Employee> employees = _context.Employees.ToList();
             return View(employees);
         }
     }
