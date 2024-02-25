@@ -1,0 +1,10 @@
+﻿@using WebApplication2.Models
+@model List<Employee>
+
+<ul>
+    @foreach (var employee in Model)
+    {
+        <li>@employee.Id @employee.Name @employee.Salary @employee.Age </li>
+    }
+
+</ul>
